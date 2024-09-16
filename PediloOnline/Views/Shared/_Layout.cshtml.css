@@ -8,7 +8,7 @@ a.navbar-brand {
 }
 
 a {
-  color: #0077cc;
+  color: #fff;
 }
 
 .btn-primary {
@@ -45,4 +45,81 @@ button.accept-policy {
   width: 100%;
   white-space: nowrap;
   line-height: 60px;
+}
+
+/* Estilo del menú lateral */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #343a40;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transition: left 0.3s;
+  z-index: 1000;
+  margin: 0; 
+  padding: 0;
+}
+
+/* Estilo del contenedor del encabezado de la sidebar */
+.sidebar-header {
+  background-color: #5c9cdf; /* Cambia este color al que prefieras */
+  padding: 16px;
+  text-align: center;
+}
+
+/* Estilo del título dentro del contenedor del encabezado */
+.sidebar-header h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #fff; /* Asegura que el texto sea visible */
+}
+
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar.closed {
+  left: -250px;
+}
+
+
+/* Estilo del botón de toggle */
+.menu-toggle {
+  position: fixed;
+  top: 10px;
+  left: 265px;
+  background-color: #5c9cdf;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1100;
+  transition: left 0.3s;
+}
+
+.menu-toggle.closed {
+  left: 15px;
+}
+
+/* Estilo de la pantalla principal */
+.main-content {
+  margin-left: 250px;
+  transition: margin-left 0.3s;
+}
+
+.main-content.expanded {
+  margin-left: 0;
+}
+
+/* Estilo para la navbar */
+.navbar {
+  margin-left: 250px;
+  transition: margin-left 0.3s, width 0.3s;
+}
+
+.navbar.expanded {
+  margin-left: 0;
+  width: 100%;
 }
